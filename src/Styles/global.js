@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-//import 'react-toastify/dist/ReactToastify.css';
-//import background from '../assets/images/background.svg';
+// import 'react-toastify/dist/ReactToastify.css';
+// import background from '../assets/images/background.svg';
 
 export default createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
@@ -29,7 +29,7 @@ export default createGlobalStyle`
       margin: 0 auto;
       padding: 0 20px 50px;
     } */
-/* 
+/*
     border-style, -moz-user-input, button {
       color: #222;
       font-size: 14px;
@@ -54,7 +54,6 @@ export default createGlobalStyle`
 
 `;
 
-
-/* 
-  background: #0D2020 url(${background}) no-repeat center top; 
+/*
+  background: #0D2020 url(${background}) no-repeat center top;
 */

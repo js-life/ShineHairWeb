@@ -1,9 +1,11 @@
 import React from 'react';
-
+import api from '~/services/api';
 // import { Container } from './styles';
 
 function Dashboard() {
-  return (<div>Dashboard</div>);
+  api.get('appointments');
+
+  return <div>Dashboard</div>;
 }
 
 export default Dashboard;

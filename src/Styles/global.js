@@ -19,6 +19,7 @@ export default createGlobalStyle`
   }
   body {
     -webkit-font-smoothing: antialiased;
+    background: linear-gradient(-90deg, #058996, #02585569);
   }
   body, input, button {
     font: 14px 'Roboto', sans-serif;

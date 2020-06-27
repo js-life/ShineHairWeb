@@ -13,6 +13,7 @@ import {
 // import { utcToZonedTime } from 'date-fns-tz';
 import pt from 'date-fns/locale/pt';
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
+import { utcToZonedTime } from 'date-fns-tz';
 import api from '~/services/api';
 
 import { Container, Time } from './styles';
@@ -34,7 +35,7 @@ export default function Dashboard() {
         params: { date },
       });
 
-      // const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
       const data = range.map((hour) => {
         const checkDate = setSeconds(setMinutes(setHours(date, hour), 0), 0);
@@ -42,11 +43,13 @@ export default function Dashboard() {
           timeZone: 'America/Bahia',
         }); // utcToZonedTime(checkDate, timezone);
 
+        const compareDateCurrent = utcToZonedTime(checkDate, timezone);
+
         compareDate = new Date(compareDate).toISOString();
 
         return {
           time: `${hour}:00h`,
-          past: isBefore(compareDate, new Date()),
+          past: isBefore(compareDateCurrent, new Date()),
           date: response.data.map((a) => a.date),
           date2: compareDate,
           appointment: response.data.find((a) =>

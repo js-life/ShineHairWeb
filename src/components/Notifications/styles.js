@@ -74,7 +74,7 @@ export const Notification = styled.div`
     font-size: 12px;
     border: 0;
     background: none;
-    color: ${lighten(0.2, '#7159c1')};
+    color: ${lighten(0.2, '#058996')};
   }
   ${(props) =>
     props.unread &&
